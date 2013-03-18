@@ -32,7 +32,15 @@ setup(name='gs.content.form',
     zip_safe=True,
     install_requires=[
         'setuptools',
-        # -*- Extra requirements: -*-
+        'Zope2',
+        'zope.app.form',
+        'zope.app.pagetemplate',
+        'zope.cachedescriptors',
+        'zope.component',
+        'zope.contentprovider',
+        'zope.interface',
+        'zope.schema',
+        'gs.content.bootstap',  # For the alert class and dismiss button.
     ],
     entry_points="""
     # -*- Entry points: -*-
