@@ -13,8 +13,10 @@ To use this radio widget import ``radio_widget`` and assign it as the
 from zope.app.form.browser import RadioWidget
 from zope.app.form.browser.widget import renderElement
 
+
 class NotBrokenRadioWidget(RadioWidget):
     _joinButtonToMessageTemplate = u'<div class="radioItem">%s&nbsp;%s</div>\n'
+
     def renderItem(self, index, text, value, name, cssClass):
         widgetId = '%s.%s' % (name, index)
         elem = renderElement(u'input',
@@ -41,9 +43,8 @@ class NotBrokenRadioWidget(RadioWidget):
           (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
+
 def radio_widget(field, request):
     return NotBrokenRadioWidget(field,
                                 field.vocabulary,
                                 request)
-
-

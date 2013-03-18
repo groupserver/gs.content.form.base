@@ -37,4 +37,3 @@ setup(name='gs.content.form',
     entry_points="""
     # -*- Entry points: -*-
     """,)
-
