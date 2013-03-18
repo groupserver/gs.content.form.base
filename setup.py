@@ -40,7 +40,7 @@ setup(name='gs.content.form',
         'zope.contentprovider',
         'zope.interface',
         'zope.schema',
-        'gs.content.bootstap',  # For the alert class and dismiss button.
+        'gs.content.js.bootstrap',  # For the alert class and dismiss button.
     ],
     entry_points="""
     # -*- Entry points: -*-
