@@ -25,7 +25,7 @@ class NotBrokenRadioWidget(RadioWidget):
                              name=name,
                              id=widgetId,
                              value=value)
-        label = 'u<label class="radioLabel" for="%s">%s</label>' % \
+        label = u'<label class="radioLabel" for="%s">%s</label>' % \
           (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
