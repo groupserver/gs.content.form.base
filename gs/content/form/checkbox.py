@@ -16,7 +16,7 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
                              id=widgetId,
                              value=value)
         label = '<label class="checkboxLabel" for="%s">%s</label>' % \
-          (widgetId, text.decode("utf-8"))
+          (widgetId, text.encode("utf-8"))
         gId = widgetId.replace('.', '-')
 
         return self._joinButtonToMessageTemplate % (gId, elem, label)
