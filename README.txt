@@ -49,7 +49,7 @@ provides a standard markup for the form, and normally sits in the
 
 Two optional boolean arguments - showPageErrors and showWidgetErrors - can be
 passed to the content provider to control whether page and widget errors are
-displayed by the content provider.
+displayed by the content provider::
 
     <tal:block content="structure provider:groupserver.FormStatusMessage"
       define="errors view/errors; status view/status; widgets view/widgets;
