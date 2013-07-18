@@ -47,6 +47,17 @@ provides a standard markup for the form, and normally sits in the
       define="errors view/errors; status view/status; widgets view/widgets"
       metal:fill-slot="messages">&#160;</tal:block>
 
+Two optional boolean arguments - showPageErrors and showWidgetErrors - can be
+passed to the content provider to control whether page and widget errors are
+displayed by the content provider.
+
+    <tal:block content="structure provider:groupserver.FormStatusMessage"
+      define="errors view/errors; status view/status; widgets view/widgets;
+              showPageErrors python:True; showWidgetErrors python:False"
+      metal:fill-slot="messages">&#160;</tal:block>
+
+showPageErrors defaults to False while showWidgetErrors defaults to True.
+
 Widgets
 =======
 

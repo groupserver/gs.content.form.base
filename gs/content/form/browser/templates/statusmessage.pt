@@ -9,7 +9,15 @@
   <div class="gs-content-form-message-status"
        tal:content="structure view/status">
   </div><!--gs-content-form-message-->
-  <dl tal:condition="view/errors" 
+  <div tal:condition="python: view.errors and view.showPageErrors">
+    <p><strong>Page Errors</strong></p>
+    <ul>
+      <tal:block repeat="error view/errors">
+        <li tal:content="structure error">Page Error message</li>
+      </tal:block>
+    </ul>
+  </div>
+  <dl tal:condition="python: view.errors and view.showWidgetErrors" 
       class="dl-horizontal">
     <tal:block repeat="widget view/widgets">
       <tal:block tal:condition="widget/error">
