@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+from abc import abstractproperty
 from zope.component import createObject
 from zope.cachedescriptors.property import Lazy
 try:
@@ -10,6 +11,10 @@ except ImportError:
 class SiteForm(PageForm):
     def __init__(self, context, request):
         super(PageForm, self).__init__(context, request)
+
+    @abstractproperty
+    def form_fields(self):
+        u'The form fields.'
 
     @Lazy
     def siteInfo(self):
