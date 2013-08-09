@@ -4,13 +4,12 @@ from zope.cachedescriptors.property import Lazy
 try:
     from five.formlib.formbase import PageForm
 except ImportError:
-    from Products.Five.formlib.formbase import PageForm
+    from Products.Five.formlib.formbase import PageForm  # lint:ok
 
 
 class SiteForm(PageForm):
     def __init__(self, context, request):
-        PageForm.__init__(self, context, request)
-        self.__siteInfo = None
+        super(PageForm, self).__init__(context, request)
 
     @Lazy
     def siteInfo(self):
