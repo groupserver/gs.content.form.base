@@ -4,7 +4,7 @@
                  mc string:alert alert-info;
                  ec string:alert-block alert-error;"
      tal:attributes="class python:ec if e else mc" role="region">
-  <button aria-hidden="true" type="button" class="close" 
+  <button aria-hidden="true" type="button" class="close"
           data-dismiss="alert">&times;</button>
   <div class="gs-content-form-message-status"
        tal:content="structure view/status">
@@ -17,12 +17,12 @@
       </tal:block>
     </ul>
   </div>
-  <dl tal:condition="python: view.errors and view.showWidgetErrors" 
+  <dl tal:condition="python: view.errors and view.showWidgetErrors"
       class="dl-horizontal">
     <tal:block repeat="widget view/widgets">
       <tal:block tal:condition="widget/error">
         <dt tal:content="widget/label">Widget Name</dt>
-        <dd class="error" 
+        <dd class="error"
             tal:content="structure widget/error">Error message</dd>
       </tal:block>
     </tal:block>
