@@ -1,4 +1,4 @@
-<div id="gs-content-form-message"
+<div id="gs-content-form-base-message"
      tal:condition="view/status"
      tal:define="e view/errors;
                  mc string:alert alert-info;
@@ -6,9 +6,9 @@
      tal:attributes="class python:ec if e else mc" role="region">
   <button aria-hidden="true" type="button" class="close"
           data-dismiss="alert">&times;</button>
-  <div class="gs-content-form-message-status"
+  <div class="gs-content-form-base-message-status"
        tal:content="structure view/status">
-  </div><!--gs-content-form-message-->
+  </div><!--gs-content-form-base-message-->
   <div tal:condition="python: view.errors and view.showPageErrors">
     <p><strong>Page Errors</strong></p>
     <ul>
@@ -27,4 +27,4 @@
       </tal:block>
     </tal:block>
   </dl>
-</div><!--gs-content-form-message-->
+</div><!--gs-content-form-base-message-->
