@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,7 +11,7 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import unicode_literals
 from zope.app.form.browser import RadioWidget
 from zope.app.form.browser.widget import renderElement
@@ -28,7 +28,8 @@ button to be toggled by clicking on the label.
 To use this radio widget import ``radio_widget`` and assign it as the
 ``custom_widget`` for the field::
     formFields['basicPrivacy'].custom_widget = radio_widget'''
-    _joinButtonToMessageTemplate = '<div class="radioItem">%s&nbsp;%s</div>\n'
+    _joinButtonToMessageTemplate = \
+        '<div class="radioItem">%s&nbsp;%s</div>\n'
 
     def renderItem(self, index, text, value, name, cssClass):
         widgetId = '%s.%s' % (name, index)
@@ -39,7 +40,7 @@ To use this radio widget import ``radio_widget`` and assign it as the
                              id=widgetId,
                              value=value)
         label = '<label class="radioLabel" for="%s">%s</label>' % \
-          (widgetId, text)
+            (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
     def renderSelectedItem(self, index, text, value, name, cssClass):
@@ -53,7 +54,7 @@ To use this radio widget import ``radio_widget`` and assign it as the
                              checked="checked",
                              type='radio')
         label = '<label class="radioLabel" for="%s">%s</label>' % \
-          (widgetId, text)
+            (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
 

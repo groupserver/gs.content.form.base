@@ -127,7 +127,7 @@ that has the CSS class set to ``disabled``.
 Resources
 =========
 
-- Code repository: https://source.iopen.net/groupserver/gs.content.form
+- Code repository: https://github.com/groupserver/gs.content.form
 - Questions and comments to http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 

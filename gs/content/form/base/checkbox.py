@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,7 +11,7 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import unicode_literals
 from zope.app.form.browser import MultiCheckBoxWidget
 from zope.app.form.browser.widget import renderElement
@@ -19,7 +19,8 @@ from zope.app.form.browser.widget import renderElement
 
 class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
     _joinButtonToMessageTemplate = \
-        '<span class="checkboxGroup" id="checkboxgroup-%s">%s&nbsp;%s</span>'
+        '<span class="checkboxGroup" '\
+        'id="checkboxgroup-%s">%s&nbsp;%s</span>'
 
     def renderItem(self, index, text, value, name, cssClass):
         widgetId = '%s.%s' % (name, index)
@@ -30,7 +31,7 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
                              id=widgetId,
                              value=value)
         label = '<label class="checkboxLabel" for="%s">%s</label>' % \
-          (widgetId, text)
+            (widgetId, text)
         gId = widgetId.replace('.', '-')
 
         return self._joinButtonToMessageTemplate % (gId, elem, label)
@@ -45,7 +46,7 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
                              value=value,
                              checked="checked")
         label = '<label class="checkboxLabel" for="%s">%s</label>' % \
-          (widgetId, text)
+            (widgetId, text)
         gId = widgetId.replace('.', '-')
         return self._joinButtonToMessageTemplate % (gId, elem, label)
 

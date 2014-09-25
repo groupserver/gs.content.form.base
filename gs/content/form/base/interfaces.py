@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,40 +11,47 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import unicode_literals
 from zope.schema import Text, Field, Bool
 from zope.contentprovider.interfaces import IContentProvider
 
 
 class IFormStatus(IContentProvider):
-    errors = Field(title='Errors',
+    errors = Field(
+        title='Errors',
         description='The errors, if any',
         required=True)
 
-    status = Text(title='Status',
+    status = Text(
+        title='Status',
         description='The status of the form.',
         required=True)
 
-    widgets = Field(title='Widgets',
+    widgets = Field(
+        title='Widgets',
         description='The widgets',
         required=True)
 
-    pageTemplateFileName = Text(title="Page Template File Name",
+    pageTemplateFileName = Text(
+        title="Page Template File Name",
         description='The name of the ZPT file that is used to '
-            'render the status message.',
+                    'render the status message.',
         required=False,
         default="browser/templates/statusmessage.pt")
 
-    showPageErrors = Bool(title="Show Page Errors",
+    showPageErrors = Bool(
+        title="Show Page Errors",
         description='If True, the content provider will display page level '
-            'errors. Otherwise, page errors will not be displayed.',
+                    'errors. Otherwise, page errors will not be displayed.',
         required=False,
         default=False)
 
-    showWidgetErrors = Bool(title="Show Widget Errors",
-        description='If True, the content provider will display all of their'
-            'errors associated with widgets on the page. Otherwise, errors'
-            'associated with widgets will not be displayed.',
+    showWidgetErrors = Bool(
+        title="Show Widget Errors",
+        description='If True, the content provider will display all of '
+                    'their errors associated with widgets on the page. '
+                    'Otherwise, errors associated with widgets will not '
+                    'be displayed.',
         required=False,
         default=True)

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,10 +11,10 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 from __future__ import unicode_literals
 from zope.schema import (getFieldsInOrder, Text, TextLine, ASCII, ASCIILine,
-    URI, Bool, Float, Int, Datetime, Date)
+                         URI, Bool, Float, Int, Datetime, Date)
 from zope.interface import alsoProvides
 import logging
 log = logging.getLogger('gs.content.form.utils')

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-##############################################################################
+############################################################################
 #
 # Copyright © 2014 OnlineGroups.net and Contributors.
 # All Rights Reserved.
@@ -11,7 +11,7 @@
 # WARRANTIES OF TITLE, MERCHANTABILITY, AGAINST INFRINGEMENT, AND FITNESS
 # FOR A PARTICULAR PURPOSE.
 #
-##############################################################################
+############################################################################
 import codecs
 import os
 from setuptools import setup, find_packages
@@ -21,10 +21,12 @@ version = get_version()
 
 with codecs.open('README.rst', encoding='utf-8') as f:
     long_description = f.read()
-with codecs.open(os.path.join("docs", "HISTORY.rst"), encoding='utf-8') as f:
+with codecs.open(os.path.join("docs", "HISTORY.rst"),
+                 encoding='utf-8') as f:
     long_description += '\n' + f.read()
 
-setup(name='gs.content.form.base',
+setup(
+    name='gs.content.form.base',
     version=version,
     description="Enhancements to the Zope formlib widgets.",
     long_description=long_description,
@@ -38,11 +40,11 @@ setup(name='gs.content.form.base',
         "Operating System :: POSIX :: Linux",
         "Programming Language :: Python",
         "Topic :: Software Development :: Libraries :: Python Modules",
-        ],
+    ],
     keywords='zope, form, formlib, zope.formlib',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='https://source.iopen.net/groupserver/gs.content.form.base/',
+    url='https://github.com/groupserver/gs.content.form.base/',
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
     namespace_packages=['gs', 'gs.content', 'gs.content.form'],
@@ -60,7 +62,8 @@ setup(name='gs.content.form.base',
         'zope.schema',
         'zope.tal',
         'zope.tales',
-        'gs.content.js.bootstrap[zope]',  # The alert class and dismiss button.
+        # The alert class and dismiss button.
+        'gs.content.js.bootstrap[zope]',
     ],
     entry_points="""
     # -*- Entry points: -*-
