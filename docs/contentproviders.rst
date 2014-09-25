@@ -46,7 +46,7 @@ Widgets
 
 The ``groupserver.FormWidgets`` content provider displays the
 widgets themselves. The ``widgets`` parameter is used to provide
-a :type:`list` of widgets to the content provider.
+a ``list`` of widgets to the content provider.
 
 .. code-block:: xml
 
