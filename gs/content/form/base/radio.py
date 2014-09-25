@@ -59,6 +59,11 @@ To use this radio widget import ``radio_widget`` and assign it as the
 
 
 def radio_widget(field, request):
+    '''Create a radio-widget with a clickable label.
+
+:param field: The field that the radio-widget is created for.
+:param request: The current HTTP request.
+:returns: A radio widget.'''
     return NotBrokenRadioWidget(field,
                                 field.vocabulary,
                                 request)

@@ -23,19 +23,25 @@ except ImportError:
 
 
 class SiteForm(PageForm):
+    '''An abstract base-class for forms on a site
+
+:param object context: The context of the form.
+:param object request: The current HTTP request.'''
     def __init__(self, context, request):
         super(PageForm, self).__init__(context, request)
 
     @abstractproperty
     def form_fields(self):
-        'The form fields.'
+        'The form fields. **Must be set** by concrete classes.'
 
     @Lazy
     def siteInfo(self):
+        '''Information about the current site.'''
         retval = createObject('groupserver.SiteInfo', self.context)
         return retval
 
     @Lazy
     def loggedInUser(self):
+        '''Information about the currently logged-in user.'''
         retval = createObject('groupserver.LoggedInUser', self.context)
         return retval

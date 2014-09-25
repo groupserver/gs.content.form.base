@@ -17,6 +17,12 @@ from zope.app.form.browser import SelectWidget
 
 
 def select_widget(field, request):
+    '''Create a select-widget that is larget than normal
+
+:param field: The field that the radio-widget is created for.
+:param request: The current HTTP request.
+:returns: A select widget.
+:rtype: :class:`zope.app.form.brower.SelectWidget`'''
     retval = SelectWidget(field, field.vocabulary, request)
     retval.size = 15  # Because there are a lot of items.
     return retval

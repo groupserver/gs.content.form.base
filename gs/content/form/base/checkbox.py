@@ -52,6 +52,11 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
 
 
 def multi_check_box_widget(field, request):
+    '''Create a widget with multiple check-boxes.
+
+:param field: The field that the checkbox-widget is created for.
+:param request: The current HTTP request.
+:returns: A multi-checkbox widget.'''
     return NotBrokenMultiCheckBoxWidget(field,
                                         field.value_type.vocabulary,
                                         request)

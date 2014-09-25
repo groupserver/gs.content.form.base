@@ -5,6 +5,7 @@ Changelog
 ------------------
 
 * Moved the code to GitHub
+* Added Sphinx documentation
 * Code tidy
 
 3.0.0 (2014-06-11)
@@ -17,8 +18,8 @@ Changelog
 ------------------
 
 * Metadata update
-* Made the form-fields property of the ``SiteForm `` an
-  *abstract* property.
+* Made the form-fields property of the ``SiteForm`` an *abstract*
+  *property*.
 
 2.2.0 (2013-07-17)
 ------------------
