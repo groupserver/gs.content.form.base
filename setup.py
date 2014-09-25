@@ -63,8 +63,9 @@ setup(
         'zope.tal',
         'zope.tales',
         # The alert class and dismiss button.
-        'gs.content.js.bootstrap[zope]',
+        # 'gs.content.js.bootstrap[zope]',
     ],
+    extras_require={'docs': ['Sphinx']},
     entry_points="""
     # -*- Entry points: -*-
     """,)
