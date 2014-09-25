@@ -13,7 +13,7 @@
 #
 ############################################################################
 from __future__ import unicode_literals
-from zope.schema import Text, Field, Bool
+from zope.schema import Text, Field, Bool, List
 from zope.contentprovider.interfaces import IContentProvider
 
 
@@ -55,3 +55,19 @@ class IFormStatus(IContentProvider):
                     'be displayed.',
         required=False,
         default=True)
+
+
+class IFormWidgets(IContentProvider):
+    'The widgets in the form'
+    widgets = List(
+        title='Widgets',
+        description='Widgets to be displayed',
+        required=True,
+        unique=True)
+
+    pageTemplateFileName = Text(
+        title="Page Template File Name",
+        description='The name of the ZPT file that is used to render the '
+                    'widgets.',
+        required=False,
+        default="browser/templates/widgets.pt")

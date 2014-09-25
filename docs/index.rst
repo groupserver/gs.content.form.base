@@ -7,6 +7,7 @@ Contents:
    :maxdepth: 2
 
    api
+   contentproviders
    HISTORY
 
 The :mod:`gs.content.form.base` product contains many functions
@@ -26,7 +27,7 @@ Resources
 
 - Documentation: 
   http://groupserver.readthedocs.org/projects/gscontentformbase/en/latest/
-- Code repository: https://github.com/groupserver/gs.content.form
+- Code repository: https://github.com/groupserver/gs.content.form.base
 - Questions and comments to http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 

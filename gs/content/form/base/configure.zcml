@@ -13,11 +13,12 @@
 <configure xmlns="http://namespaces.zope.org/zope"
            i18n_domain="groupserver">
 
+  <!--Status message-->
   <interface
     interface=".interfaces.IFormStatus"
-    type="zope.contentprovider.interfaces.ITALNamespaceData"/>
+    type="zope.contentprovider.interfaces.ITALNamespaceData" />
   <class class=".statusmessage.StatusMessage">
-    <implements interface=".interfaces.IFormStatus"/>
+    <implements interface=".interfaces.IFormStatus" />
   </class>
   <adapter
     for="zope.interface.Interface
@@ -25,6 +26,21 @@
          zope.interface.Interface"
     factory=".statusmessage.StatusMessage"
     provides="zope.contentprovider.interfaces.IContentProvider"
-    name="groupserver.FormStatusMessage"/>
+    name="groupserver.FormStatusMessage" />
+
+  <!--Widgets-->
+  <interface
+    interface=".interfaces.IFormWidgets"
+    type="zope.contentprovider.interfaces.ITALNamespaceData" />
+  <class class=".formwidgets.FormWidgets">
+    <implements interface=".interfaces.IFormWidgets" />
+  </class>
+  <adapter
+    for="zope.interface.Interface
+         zope.publisher.interfaces.browser.IDefaultBrowserLayer
+         zope.interface.Interface"
+    factory=".formwidgets.FormWidgets"
+    provides="zope.contentprovider.interfaces.IContentProvider"
+    name="groupserver.FormWidgets" />
 
 </configure>

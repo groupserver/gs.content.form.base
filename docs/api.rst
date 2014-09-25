@@ -24,43 +24,6 @@ Example
       def __init__(self, context, request):
           super(Change, self).__init__(context, request)
 
-
-Status Message
---------------
-
-The content provider ``groupserver.FormStatusMessage`` displays
-the status of a form (``self.status`` and ``self.errors``), after
-it submits. It provides a standard markup for the form, and
-normally sits in the ``messages`` slot
-
-.. code-block:: xml
-
-    <tal:block 
-      content="structure provider:groupserver.FormStatusMessage"
-      define="errors view/errors; 
-              status view/status;
-              widgets view/widgets"
-      metal:fill-slot="messages">&#160;</tal:block>
-
-Two optional Boolean arguments — ``showPageErrors`` and
-``showWidgetErrors`` — can be passed to the content provider to
-control whether page and widget errors are displayed by the
-content provider
-
-.. code-block:: xml
-
-    <tal:block 
-      content="structure provider:groupserver.FormStatusMessage"
-      define="errors view/errors; 
-              status view/status;
-              widgets view/widgets;
-              showPageErrors python:True; 
-              showWidgetErrors python:False"
-      metal:fill-slot="messages">&#160;</tal:block>
-
-``showPageErrors`` defaults to ``False`` while
-``showWidgetErrors`` defaults to ``True``.
-
 Widgets
 -------
 
