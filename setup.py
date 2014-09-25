@@ -52,7 +52,6 @@ setup(
     zip_safe=False,
     install_requires=[
         'setuptools',
-        #'Zope2',
         'five.formlib',
         'zope.app.form',
         'zope.app.pagetemplate',
