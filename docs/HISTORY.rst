@@ -1,10 +1,11 @@
 Changelog
 =========
 
-3.0.1 (2014-09-27)
+3.0.1 (2014-10-10)
 ------------------
 
 * Moved the code to GitHub
+* Named the reStructuredText files as such
 * Added Sphinx documentation
 * Code tidy
 
