@@ -1,5 +1,5 @@
 <tal:block
-  repeat="widget options/view/widgets"
+  repeat="widget view/widgets"
   xmlns:tal="http://xml.zope.org/namespaces/tal">
   <div class="form-widget" id="widget-abc123"
        tal:define="req widget/required;

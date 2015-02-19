@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 ############################################################################
 #
-# Copyright © 2014 OnlineGroups.net and Contributors.
+# Copyright © 2014, 2015 OnlineGroups.net and Contributors.
 # All Rights Reserved.
 #
 # This software is subject to the provisions of the Zope Public License,
@@ -13,7 +13,7 @@
 #
 ############################################################################
 from __future__ import absolute_import, unicode_literals
-from zope.pagetemplate.pagetemplatefile import PageTemplateFile
+from zope.browserpage import ViewPageTemplateFile
 from zope.contentprovider.interfaces import (UpdateNotCalled)
 
 
@@ -32,5 +32,6 @@ class FormWidgets(object):
     def render(self):
         if not self.__updated:
             raise UpdateNotCalled
-        pageTemplate = PageTemplateFile(self.pageTemplateFileName)
-        return pageTemplate(view=self)
+        pageTemplate = ViewPageTemplateFile(self.pageTemplateFileName)
+        retval = pageTemplate(self)
+        return retval
