@@ -17,6 +17,7 @@ import os
 from setuptools import setup, find_packages
 from version import get_version
 
+name = 'gs.content.form.base'
 version = get_version()
 
 with codecs.open('README.rst', encoding='utf-8') as f:
@@ -26,7 +27,7 @@ with codecs.open(os.path.join("docs", "HISTORY.rst"),
     long_description += '\n' + f.read()
 
 setup(
-    name='gs.content.form.base',
+    name=name,
     version=version,
     description="Enhancements to the Zope formlib widgets.",
     long_description=long_description,
@@ -44,10 +45,11 @@ setup(
     keywords='zope, form, formlib, zope.formlib',
     author='Michael JasonSmith',
     author_email='mpj17@onlinegroups.net',
-    url='https://github.com/groupserver/gs.content.form.base/',
+    url='https://github.com/groupserver/{0}'.format(name),
     license='ZPL 2.1',
     packages=find_packages(exclude=['ez_setup']),
-    namespace_packages=['gs', 'gs.content', 'gs.content.form'],
+    namespace_packages=['.'.join(name.split('.')[:i])
+                        for i in range(1, len(name.split('.')))],
     include_package_data=True,
     zip_safe=False,
     install_requires=[
@@ -55,17 +57,20 @@ setup(
         'five.formlib',
         'zope.app.form',
         'zope.app.pagetemplate',
+        'zope.browserpage'
         'zope.cachedescriptors',
         'zope.component',
         'zope.contentprovider',
         'zope.interface',
         'zope.schema',
-        'zope.tal',
-        'zope.tales',
-        # The alert class and dismiss button.
-        # 'gs.content.js.bootstrap[zope]',
     ],
-    extras_require={'docs': ['Sphinx']},
+    extras_require={
+        'docs': ['Sphinx'],
+        'zope': ['zope.publisher',
+                 'zope.tal',
+                 'zope.tales',
+                 'gs.content.js.bootstrap[zope]', ],
+    },
     entry_points="""
     # -*- Entry points: -*-
     """,)
