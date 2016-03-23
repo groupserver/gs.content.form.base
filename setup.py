@@ -57,7 +57,7 @@ setup(
         'five.formlib',
         'zope.app.form',
         'zope.app.pagetemplate',
-        'zope.browserpage'
+        'zope.browserpage',
         'zope.cachedescriptors',
         'zope.component',
         'zope.contentprovider',
