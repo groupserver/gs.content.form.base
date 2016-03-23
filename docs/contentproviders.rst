@@ -5,6 +5,8 @@ Two content providers are used for standard parts of forms in
 GroupServer. One displays the `status message`_ at the top of the
 page, while the other displays the widgets_.
 
+.. _statusMessageCP:
+
 Status message
 --------------
 
@@ -40,6 +42,8 @@ content provider
 
 ``showPageErrors`` defaults to ``False`` while
 ``showWidgetErrors`` defaults to ``True``.
+
+.. _widgetscp:
 
 Widgets
 -------

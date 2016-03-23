@@ -3,7 +3,9 @@
 
 The package exports the following API symbols.
 
-Site Form
+.. _siteform:
+
+Site form
 ---------
 
 The abstract base-class ``gs.content.form.SiteForm`` is a Zope
@@ -24,13 +26,15 @@ Example
       def __init__(self, context, request):
           super(Change, self).__init__(context, request)
 
+.. _widgets:
+
 Widgets
 -------
 
 Four custom widgets are provided: `radio buttons`_, `check
 boxes`_, a select_, and a `disabled text`_ entry.
 
-Radio Buttons
+Radio buttons
 ~~~~~~~~~~~~~
 
 The widget :func:`gs.content.form.base.radio_widget` is a variant
