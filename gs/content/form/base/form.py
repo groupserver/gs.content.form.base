@@ -12,7 +12,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ############################################################################
-from __future__ import unicode_literals
+from __future__ import absolute_import, unicode_literals
 from abc import abstractproperty
 from zope.component import createObject
 from zope.cachedescriptors.property import Lazy

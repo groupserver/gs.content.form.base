@@ -12,7 +12,7 @@
 # FOR A PARTICULAR PURPOSE.
 #
 ############################################################################
-from __future__ import unicode_literals
+from __future__ import absolute_import, unicode_literals
 from zope.schema import Text, Field, Bool, List
 from zope.contentprovider.interfaces import IContentProvider
 
