@@ -53,7 +53,7 @@ zope.processlifetime==1.0
 zope.deferredimport==3.5.3
 zope.container==3.11.2
 zope.browserresource==3.10.3
-zLOG==2.12.0
+zLOG==2.11.1
 zExceptions==2.13.0
 zdaemon==2.0.7
 tempstorage==2.12.2
