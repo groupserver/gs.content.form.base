@@ -1,6 +1,12 @@
 Changelog
 =========
 
+3.0.3 (2016-03-24)
+------------------
+
+* Adding a style guide to the documentation
+* Adding some unit tests.
+
 3.0.2 (2015-02-26)
 ------------------
 
