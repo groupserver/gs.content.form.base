@@ -187,16 +187,41 @@ The following actions have specific meanings in GroupServer.
      :term:`administrator`. See also :term:`add`. This is the
      inverse of :term:`request`.
 
+   Join
+     * The general term for a :term:`person` becoming a
+       :term:`member` of a :term:`group` (see also :term:`add`,
+       :term:`invite`, :term:`register`):
+
+         This month 10 people joined GroupServer Development.
+
+     * The specific way that a :term:`person` that already has a
+       :term:`profile` becomes a :term:`member` of a **public**
+       :term:`group` using the web interface (see also
+       :term:`register`, :term:`subscribe`):
+
+         Join this group to add a post.
+
    Leave
      A :term:`person` will leave a :term:`group` when they no
      longer wish to be a :term:`member`. See also
-     :term:`unsubscribe`.
+     :term:`remove`, :term:`unsubscribe`.
 
    Manage
      Alter the privileges and membership of a :term:`group
      member`:
 
        Manage the members of GroupServer Development.
+
+   Register
+   Sign up
+     A :term:`person` registers to create a :term:`profile` and
+     :term:`join` a **public** :term:`group` (see also
+     :term:`add` :term:`invite`):
+
+       Register to become a member of GroupServer Development.
+
+     Since GroupServer 14.03 *register* has been preferred over
+     *sign up*.
 
    Remove
       A :term:`administrator` may remove a :term:`member` from a
@@ -215,11 +240,34 @@ The following actions have specific meanings in GroupServer.
         *Example member*. They are now a normal member of this
         group.
 
+   Sign in
+   Login
+     Entering an :term:`email address` and password so
+     GroupServer knows the :term:`profile` to use for the
+     subsequent actions:
+
+       Sign in to view the messages in GroupServer Team.
+
+     Since GroupServer 14.03 *sign in* has been preferred over
+     *login*.
+
+   Subscribe
+     A particular way a person becomes a :term:`member` of a
+     **public** :term:`group` by sending a :term:`message` to the
+     group with ``Subscribe`` as the
+     :mailheader:`Subject`. Prefer the term :term:`join` in the
+     general case.
+
    Unsubscribe
-      A particular way to leave a group by sending a message to
-      the group with ``Unsubscribe`` as the
+      A particular way to leave a :term:`group` by sending a
+      :term:`message` to the group with ``Unsubscribe`` as the
       :mailheader:`Subject`. Prefer the term :term:`leave` in the
       general case.
+
+   Verify
+     Prove that an :term:`email address` is correct and
+     working. Only an email addresses is ever verified, never a
+     :term:`person`.
 
 Objects
 ~~~~~~~
