@@ -19,8 +19,7 @@ from zope.app.form.browser.widget import renderElement
 
 class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
     _joinButtonToMessageTemplate = \
-        '<span class="checkboxGroup" '\
-        'id="checkboxgroup-%s">%s&nbsp;%s</span>'
+        '<span class="checkboxGroup" id="checkboxgroup-%s">%s&nbsp;%s</span>'
 
     def renderItem(self, index, text, value, name, cssClass):
         widgetId = '%s.%s' % (name, index)
@@ -30,8 +29,7 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
                              name=name,
                              id=widgetId,
                              value=value)
-        label = '<label class="checkboxLabel" for="%s">%s</label>' % \
-            (widgetId, text)
+        label = '<label class="checkboxLabel" for="%s">%s</label>' % (widgetId, text)
         gId = widgetId.replace('.', '-')
 
         return self._joinButtonToMessageTemplate % (gId, elem, label)
@@ -45,8 +43,7 @@ class NotBrokenMultiCheckBoxWidget(MultiCheckBoxWidget):
                              id=widgetId,
                              value=value,
                              checked="checked")
-        label = '<label class="checkboxLabel" for="%s">%s</label>' % \
-            (widgetId, text)
+        label = '<label class="checkboxLabel" for="%s">%s</label>' % (widgetId, text)
         gId = widgetId.replace('.', '-')
         return self._joinButtonToMessageTemplate % (gId, elem, label)
 
@@ -57,6 +54,4 @@ def multi_check_box_widget(field, request):
 :param field: The field that the checkbox-widget is created for.
 :param request: The current HTTP request.
 :returns: A multi-checkbox widget.'''
-    return NotBrokenMultiCheckBoxWidget(field,
-                                        field.value_type.vocabulary,
-                                        request)
+    return NotBrokenMultiCheckBoxWidget(field, field.value_type.vocabulary, request)

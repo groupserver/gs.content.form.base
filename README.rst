@@ -29,9 +29,11 @@ dealing with ``zope.formlib`` forms [#formlib]_ in
 Resources
 =========
 
-- Documentation: http://groupserver.rtfd.org/projects/gscontentformbase/
+- Documentation:
+  http://groupserver.rtfd.org/projects/gscontentformbase/
 - Code repository: https://github.com/groupserver/gs.content.form
-- Questions and comments to http://groupserver.org/groups/development
+- Questions and comments to
+  http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
 
 .. _GroupServer: http://groupserver.org/

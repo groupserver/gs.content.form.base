@@ -28,8 +28,7 @@ button to be toggled by clicking on the label.
 To use this radio widget import ``radio_widget`` and assign it as the
 ``custom_widget`` for the field::
     formFields['basicPrivacy'].custom_widget = radio_widget'''
-    _joinButtonToMessageTemplate = \
-        '<div class="radioItem">%s&nbsp;%s</div>\n'
+    _joinButtonToMessageTemplate = '<div class="radioItem">%s&nbsp;%s</div>\n'
 
     def renderItem(self, index, text, value, name, cssClass):
         widgetId = '%s.%s' % (name, index)
@@ -39,8 +38,7 @@ To use this radio widget import ``radio_widget`` and assign it as the
                              name=name,
                              id=widgetId,
                              value=value)
-        label = '<label class="radioLabel" for="%s">%s</label>' % \
-            (widgetId, text)
+        label = '<label class="radioLabel" for="%s">%s</label>' % (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
     def renderSelectedItem(self, index, text, value, name, cssClass):
@@ -53,8 +51,7 @@ To use this radio widget import ``radio_widget`` and assign it as the
                              cssClass=cssClass,
                              checked="checked",
                              type='radio')
-        label = '<label class="radioLabel" for="%s">%s</label>' % \
-            (widgetId, text)
+        label = '<label class="radioLabel" for="%s">%s</label>' % (widgetId, text)
         return self._joinButtonToMessageTemplate % (elem, label)
 
 
@@ -64,6 +61,4 @@ def radio_widget(field, request):
 :param field: The field that the radio-widget is created for.
 :param request: The current HTTP request.
 :returns: A radio widget.'''
-    return NotBrokenRadioWidget(field,
-                                field.vocabulary,
-                                request)
+    return NotBrokenRadioWidget(field, field.vocabulary, request)
