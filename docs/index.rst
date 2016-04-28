@@ -27,7 +27,7 @@ Resources
 =========
 
 - Documentation: 
-  http://groupserver.readthedocs.org/projects/gscontentformbase/en/latest/
+  http://groupserver.readthedocs.io/projects/gscontentformbase/en/latest/
 - Code repository: https://github.com/groupserver/gs.content.form.base
 - Questions and comments to http://groupserver.org/groups/development
 - Report bugs at https://redmine.iopen.net/projects/groupserver
